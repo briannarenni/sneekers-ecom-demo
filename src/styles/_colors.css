@@ -1,0 +1,16 @@
+:root {
+  --page-font: 'Kumbh Sans', sans-serif;
+
+  --primary-brand: rgba(255, 107, 0, 1);
+  --secondary-brand: rgba(255, 227, 204, 1);
+  --page-bg: rgb(230, 225, 225);
+
+  --primary-text: rgba(170, 178, 186, 1);
+  --accent-text: rgba(13, 17, 22, 1);
+  --btn-text: rgba(255, 255, 255, 1);
+  --lightbox-bg: rgba(0, 0, 0, 0.75);
+
+  --gray: rgba(170, 178, 186, 1);
+  --gray-blue: rgba(88, 102, 117, 1);
+  --off-white: rgba(233, 239, 242, 1);
+}
