@@ -1,5 +1,6 @@
 :root {
-  --page-font: 'Kumbh Sans', sans-serif;
+  --body-font: 'Kumbh Sans', sans-serif;
+  --logo-font: 'Permanent Marker', cursive;
 
   --primary-brand: rgba(255, 107, 0, 1);
   --secondary-brand: rgba(255, 227, 204, 1);
