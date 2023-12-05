@@ -5,8 +5,9 @@
   --font-icon: none;
   --page-bg: #ffffff;
   --lightbox-bg: rgba(0, 0, 0, 0.75);
-  --primary-text: rgba(170, 178, 186, 1);
+  --primary-text: #69707D;
   --accent-text: rgba(13, 17, 22, 1);
+  --action-text: #0079FF;
   --btn-text: rgba(255, 255, 255, 1);
   --gray: rgba(170, 178, 186, 1);
   --gray-blue: rgba(88, 102, 117, 1);
@@ -17,21 +18,21 @@
 :root,
 body.light {
   --primary: rgba(255, 107, 0, 1);
+  --secondary: rgba(255, 227, 204, 1);
+  --background: rgb(230, 225, 225);
+  --surface: rgb(255, 255, 255);
+  --error: rgba(255, 0, 0, 1);
   --on-primary: #ffffff;
   --primary-container: rgb(251, 244, 238);
   --on-primary-container: rgba(13, 17, 22, 1);
-  --secondary: rgba(255, 227, 204, 1);
   --on-secondary: #ffffff;
   --secondary-container: rgba(255, 227, 204, 1);
   --on-secondary-container: rgba(13, 17, 22, 1);
-  --background: rgb(230, 225, 225);
   --on-background: rgba(13, 17, 22, 1);
-  --surface: rgb(255, 255, 255);
   --surface-container: #ffffff;
   --on-surface: rgba(13, 17, 22, 1);
   --surface-variant: rgba(88, 102, 117, 1);
   --on-surface-variant: #ffffff;
-  --error: rgba(255, 0, 0, 1);
   --on-error: #ffffff;
   --error-container: rgba(255, 0, 0, 0.75);
   --on-error-container: #ffffff;

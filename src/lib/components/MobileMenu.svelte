@@ -4,6 +4,8 @@
   };
 </script>
 
+
+<!-- TODO: Icon Close (menu) -->
 <nav class="menu left drawer min">
   <!-- TODO: Close button -->
   <a href="/" on:click={handleMenuClick}>

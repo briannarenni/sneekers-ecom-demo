@@ -2,7 +2,7 @@
 
 @import '/src/styles/_reset.css';
 @import '/src/styles/_design.css';
-/* @import '/src/styles/_scaling.css'; */
+@import '/src/styles/_scaling.css';
 
 :root {
   color-scheme: light dark;
@@ -14,8 +14,10 @@
 }
 
 body {
+  min-height: 100vh;
   font-size: 16px;
   line-height: 1.6;
+  color: var(--primary-text);
 }
 
 h1,
@@ -25,4 +27,42 @@ h4,
 h5,
 h6 {
   font-family: inherit;
+}
+
+/* Grid Layout */
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 1024px) {
+  .app-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    grid-template-areas:
+      "nav nav"
+      "hero aside"
+      "footer footer";
+  }
+
+  .nav-comp {
+    grid-area: nav;
+  }
+
+  .hero-comp {
+    grid-area: hero;
+  }
+
+  .aside-comp {
+    grid-area: aside;
+  }
+
+  .footer-comp {
+    grid-area: footer;
+  }
 }

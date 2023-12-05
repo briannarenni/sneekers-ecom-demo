@@ -1,5 +1,10 @@
-<script></script>
+<script>
+import { Plus, Minus } from 'lucide-svelte';
+</script>
 
+<!-- TODO Compare Icons -->
+<!-- <img src="/src/assets/icons/icon-plus.svg" alt=""/> -->
+<!-- <img src="/src/assets/icons/icon-minus.svg" alt=""/> -->
 <div class="product-info">
   <p>#sweaterweather</p>
 
