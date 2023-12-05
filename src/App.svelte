@@ -9,7 +9,7 @@
   About
   Contact
 
-  Sneaker Company
+  #sweaterweather
 
   Fall Limited Edition Sneakers
 

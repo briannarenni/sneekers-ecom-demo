@@ -1,5 +1,5 @@
 @import '/src/styles/_reset.css';
-@import '/src/styles/_colors.css';
+@import '/src/styles/_design.css';
 @import '/src/styles/_scaling.css';
 
 :root {
@@ -13,8 +13,8 @@
 
 body {
   font-family: var(--body-font), monospace;
-  line-height: 1.6;
   font-size: 16px;
+  line-height: 1.6;
 }
 
 h1,
@@ -24,39 +24,4 @@ h4,
 h5,
 h6 {
   font-family: inherit;
-}
-
-/* Utility Classes */
-.flex-row {
-  display: flex;
-}
-
-.flex-col {
-  display: flex;
-  flex-direction: column;
-}
-
-.link-text {
-  color: var(--action-text);
-  font-family: var(--secondary-font);
-}
-
-.link-text:hover {
-  text-decoration: underline;
-}
-
-.null-text {
-  color: var(--null-text);
-  font-family: var(--secondary-font), monospace;
-  font-style: italic;
-  text-decoration: none;
-  pointer-events: none;
-}
-
-.error-text {
-  color: var(--error-color);
-  font-weight: bold;
-  font-family: var(--secondary-font);
-  padding-inline-start: var(--spacing-lg);
-  margin-block-start: var(--spacing-sm);
 }
