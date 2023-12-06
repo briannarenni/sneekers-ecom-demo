@@ -29,6 +29,17 @@ h6 {
   font-family: inherit;
 }
 
+/* Lucide Icon sizing */
+.nav-icon-sm {
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+}
+
+.nav-icon-md {
+  width: var(--icon-md);
+  height: var(--icon-md);
+}
+
 /* Grid Layout */
 .app-container {
   display: grid;
@@ -40,18 +51,17 @@ h6 {
 
 @media screen and (min-width: 1024px) {
   .app-container {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 1rem;
     grid-template-areas:
-      "nav nav"
+      "header header"
       "hero aside"
       "footer footer";
   }
 
-  .nav-comp {
-    grid-area: nav;
+  .header-comp {
+    grid-area: header;
   }
 
   .hero-comp {

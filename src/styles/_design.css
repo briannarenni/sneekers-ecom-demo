@@ -2,6 +2,8 @@
 
 :root {
   --font: 'Kumbh Sans', sans-serif;
+  /* --logo-font: 'Permanent Marker', cursive; */
+  --logo-font: 'Playpen Sans', sans-serif;
   --font-icon: none;
   --page-bg: #ffffff;
   --lightbox-bg: rgba(0, 0, 0, 0.75);

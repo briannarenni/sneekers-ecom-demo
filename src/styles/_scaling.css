@@ -2,8 +2,8 @@
   /* Base Icon Sizing */
   --icon-xs: 1.25em;
   --icon-sm: 1.5em;
-  --icon-md: 2em;
-  --icon-lg: 3em;
+  --icon-md: 1.75em;
+  --icon-lg: 2em;
 
   /* Base Gap Scale */
   --gap-xs: calc(1em * 0.5);
