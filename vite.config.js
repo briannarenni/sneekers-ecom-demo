@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
+import path from 'path';
 
 export default defineConfig({
   plugins: [svelte()],
@@ -9,13 +10,14 @@ export default defineConfig({
   base: '/sneekers-ecom-demo/',
   resolve: {
     alias: {
-      '@': './',
-      '@src': './src',
-      '@lib': './src/lib',
-      '@scripts': './src/scripts',
-      '@styles': './src/styles',
-      '@components': './src/lib/components',
-      '@layout': './src/lib/layout'
-    },
-  },
+      '@': path.resolve(__dirname, './'),
+      '@src': path.resolve(__dirname, './src'),
+      '@lib': path.resolve(__dirname, './src/lib'),
+      '@scripts': path.resolve(__dirname, './src/scripts'),
+      '@styles': path.resolve(__dirname, './src/styles'),
+      '@components': path.resolve(__dirname, './src/lib/components'),
+      '@layout': path.resolve(__dirname, './src/lib/layout')
+    }
+  }
+
 });
