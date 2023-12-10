@@ -11,6 +11,8 @@
 <style>
   header {
     height: fit-content;
+    padding-inline: var(--gap-lg);
+    padding-block: var(--spacing-xs);
   }
 
   @media screen and (min-width: 768px) {

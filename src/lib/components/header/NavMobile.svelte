@@ -1,37 +1,19 @@
 <script>
   import { Menu, ShoppingCart, CircleUserRound } from 'lucide-svelte';
-  import MobileMenu from './MobileMenu.svelte';
-
-  let isMenuOpen = false;
-
-  const toggleMenu = () => {
-    isMenuOpen = !isMenuOpen;
-  };
+  import MenuBtn from '@btn/MenuBtn.svelte';
 </script>
 
 <nav class="mobile-nav">
   <div class="left-nav">
-    <button class="menu-btn" on:click={toggleMenu}>
-      <Menu class="nav-icon-sm" />
-    </button>
+    <MenuBtn />
     <img class="logo" src="src/assets/icons/logo.svg" alt="sneekers Logo" />
   </div>
 
   <div class="right-nav">
-    <ShoppingCart class="nav-icon-sm" strokeWidth={1.5} fill-opacity="0" />
-    <CircleUserRound
-      class="nav-icon-md"
-      color={'#ff6b00'}
-      size={30}
-      strokeWidth={1.5}
-      fill-opacity="0"
-    />
+    <ShoppingCart class="nav-icon" strokeWidth={1.5} fill-opacity="0" />
+    <CircleUserRound class="nav-icon" strokeWidth={1.5} fill-opacity="0" />
   </div>
 </nav>
-
-{#if isMenuOpen}
-  <MobileMenu {toggleMenu} />
-{/if}
 
 <style>
   .mobile-nav {
@@ -41,20 +23,25 @@
     align-items: center;
   }
 
-  .logo {
-    width: 50%;
-  }
-
   .left-nav,
   .right-nav {
+    height: 100%;
     display: inline-flex;
     align-items: center;
     gap: var(--spacing-md);
   }
 
-  @media screen and (min-width: 768px) {
+  .left-nav {
+    width: 40%;
+  }
+
+  .logo {
+    width: calc(95% + 0.5vw);
+  }
+
+  @media screen and (min-width: 650px) {
     .logo {
-      width: 75%;
+      width: calc(70% + 0.2vw);
     }
   }
 

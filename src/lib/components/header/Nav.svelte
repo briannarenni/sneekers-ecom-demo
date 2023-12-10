@@ -3,13 +3,16 @@
 </script>
 
 <!-- * If over 768px, show full Menu and bottom border -->
-<nav class="nav">
-  <h1>REG NAV</h1>
+<nav class="full-nav">
+  <h1>REG NAV BAR LONG TEST</h1>
 </nav>
 
 <style>
+  .full-nav {
+    width: 100%;
+  }
   @media screen and (max-width: 1023px) {
-    .nav {
+    .full-nav {
       display: none;
     }
   }

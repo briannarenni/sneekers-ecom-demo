@@ -54,4 +54,8 @@
   .close-btn {
     width: fit-content;
   }
+
+  a div {
+    font-weight: 700;
+  }
 </style>

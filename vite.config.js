@@ -15,6 +15,7 @@ export default defineConfig({
       '@lib': path.resolve(__dirname, './src/lib'),
       '@scripts': path.resolve(__dirname, './src/scripts'),
       '@styles': path.resolve(__dirname, './src/styles'),
+      '@btn': path.resolve(__dirname, './src/lib/btn'),
       '@components': path.resolve(__dirname, './src/lib/components'),
       '@layout': path.resolve(__dirname, './src/lib/layout')
     }

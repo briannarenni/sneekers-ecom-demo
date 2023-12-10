@@ -30,12 +30,7 @@ h6 {
 }
 
 /* Lucide Icon sizing */
-.nav-icon-sm {
-  width: var(--icon-sm);
-  height: var(--icon-sm);
-}
-
-.nav-icon-md {
+.nav-icon {
   width: var(--icon-md);
   height: var(--icon-md);
 }
@@ -44,15 +39,15 @@ h6 {
 .app-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  gap: 1rem;
+  grid-template-rows: auto auto auto min-content;
+  gap: var(--gap-xs);
   min-height: 100vh;
 }
 
 @media screen and (min-width: 1024px) {
   .app-container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto min-content;
     gap: 1rem;
     grid-template-areas:
       "header header"

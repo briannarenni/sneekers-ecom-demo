@@ -1,1 +1,7 @@
-<h1 class="aside-comp">Aside blah blah</h1>
+<script>
+  import ProductCard from '@components/ProductCard.svelte';
+</script>
+
+<ProductCard />
+
+<style></style>
