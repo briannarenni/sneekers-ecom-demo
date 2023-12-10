@@ -1,5 +1,6 @@
 <script>
   import { X, ArrowBigRight } from 'lucide-svelte';
+  import { slide } from 'svelte-legos';
 
   export let toggleMenu;
 
@@ -12,7 +13,13 @@
     .trim();
 </script>
 
-<nav class="menu left drawer min">
+<nav
+  class="menu left drawer min"
+  transition:slide={{
+    duration: 200,
+    direction: 'left'
+  }}
+>
   <button class="close-btn" on:click={toggleMenu}>
     <X class="mobile-icon" color={iconColor} />
   </button>
