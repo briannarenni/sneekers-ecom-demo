@@ -8,10 +8,10 @@
 <style>
   .footer {
     color: var(--gray-blue);
-    font-size: 15px;
+    font-size: 14px;
     text-align: center;
     height: fit-content;
-    padding-block: var(--spacing-md);
+    padding-block: var(--spacing-sm);
     border-block: 1px solid var(--off-white);
   }
 
