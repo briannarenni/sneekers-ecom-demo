@@ -40,14 +40,13 @@ h6 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content auto auto min-content;
-  gap: var(--gap-xs);
   min-height: 100vh;
 }
 
 @media screen and (min-width: 1024px) {
   .app-container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto min-content;
+    grid-template-rows: auto auto auto min-content;
     gap: 1rem;
     grid-template-areas:
       "header header"

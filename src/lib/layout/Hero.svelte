@@ -1,7 +1,7 @@
-<script></script>
+<script>
+  import SlideGallery from '@components/hero/SlideGallery.svelte';
+</script>
 
-<h1 class="hero-comp">Hero</h1>
+<SlideGallery />
 
-<!-- * No hero padding on mobile -->
-<style>
-</style>
+<!-- No hero padding on mobile -->

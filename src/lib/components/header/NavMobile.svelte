@@ -39,9 +39,9 @@
     width: calc(95% + 0.5vw);
   }
 
-  @media screen and (min-width: 650px) {
+  @media screen and (min-width: 600px) {
     .logo {
-      width: calc(70% + 0.2vw);
+      width: calc(60% + 0.1vw);
     }
   }
 
