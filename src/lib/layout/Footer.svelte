@@ -7,12 +7,12 @@
 
 <style>
   .footer {
-    border-block: 1px solid var(--off-white);
     color: var(--gray-blue);
     font-size: 15px;
     text-align: center;
-    padding-block: var(--spacing-md);
     height: fit-content;
+    padding-block: var(--spacing-md);
+    border-block: 1px solid var(--off-white);
   }
 
   .footer a {
