@@ -1,6 +1,6 @@
 <script>
   import { X, ArrowBigRight } from 'lucide-svelte';
-  import { slide } from 'svelte-legos';
+  import { fly } from 'svelte/transition';
 
   export let toggleMenu;
 
@@ -15,10 +15,8 @@
 
 <nav
   class="menu left drawer min"
-  transition:slide={{
-    duration: 200,
-    direction: 'left'
-  }}
+  in:fly={{ x: -100, duration: 200 }}
+  out:fly={{ x: -100, duration: 300 }}
 >
   <button class="close-btn" on:click={toggleMenu}>
     <X class="mobile-icon" color={iconColor} />
