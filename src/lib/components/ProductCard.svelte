@@ -1,32 +1,31 @@
 <script>
-  import Qty from '@btn/Qty.svelte';
-  import AddCartBtn from '@btn/AddCartBtn.svelte';
+  import { AddCartBtn, QtyBtn } from '@btn/index.js';
 
   const iconColor = getComputedStyle(document.documentElement).getPropertyValue('--primary').trim();
 </script>
 
 <div class="product-card">
-  <div class="product-info">
-    <section class="title-wrap">
+  <section class="product-info">
+    <header class="title-wrap">
       <span class="hashtag">#sweaterweather</span>
       <h1 class="headline">Fall Limited Edition Sneakers</h1>
-    </section>
+    </header>
     <p class="desc">
       These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber
       outer sole, they’ll withstand everything the weather can offer.
     </p>
-    <div class="prices">
+    <section class="prices">
       <div class="prices-left">
         <h2 class="headline">$125.00</h2>
         <p class="discount">50%</p>
       </div>
       <p class="old-price">$250.00</p>
-    </div>
+    </section>
     <div class="cta-wrap">
-      <Qty />
+      <QtyBtn />
       <AddCartBtn />
     </div>
-  </div>
+  </section>
 </div>
 
 <style>
@@ -50,6 +49,8 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
+    /* Override BeerCSS style */
+    padding: 0;
   }
 
   .prices {
@@ -106,24 +107,18 @@
   }
 
   /* Queries */
-  @media screen and (min-width: 550px) {
-    .product-info {
-      width: 90%;
-    }
-
+  @media screen and (min-width: 450px) {
     .prices {
-      /* display: block; */
-      width: 40%;
-      align-self: flex-start;
+      display: block;
     }
-
     .old-price {
-      margin-inline-start: var(--spacing-md);
+      margin-block-start: var(--spacing-sm);
     }
   }
-  @media screen and (min-width: 801px) and (max-width: 1024px) {
+
+  @media screen and (min-width: 550px) {
     .product-info {
-      width: 80%;
+      width: clamp(400px, 80%, 600px);
     }
   }
 
@@ -135,7 +130,8 @@
     .cta-wrap {
       flex-direction: row;
     }
-     .prices {
+
+    .prices {
       display: block;
     }
 

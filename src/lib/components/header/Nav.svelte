@@ -11,6 +11,7 @@
   .full-nav {
     width: 100%;
   }
+
   @media screen and (max-width: 1023px) {
     .full-nav {
       display: none;

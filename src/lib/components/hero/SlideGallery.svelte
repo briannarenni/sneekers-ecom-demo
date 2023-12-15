@@ -101,7 +101,7 @@
   /* Queries */
   @media screen and (min-width: 550px) {
     .img-wrap {
-      width: clamp(400px, 75%, 600px);
+      width: clamp(400px, 80%, 600px);
       border-radius: 15px;
     }
   }

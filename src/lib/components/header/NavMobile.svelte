@@ -1,6 +1,6 @@
 <script>
   import { Menu, ShoppingCart, CircleUserRound } from 'lucide-svelte';
-  import MenuBtn from '@btn/MenuBtn.svelte';
+  import { MenuBtn } from '@btn/index.js';
 </script>
 
 <nav class="mobile-nav">
