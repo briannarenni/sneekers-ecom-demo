@@ -12,7 +12,7 @@
     text-align: center;
     height: fit-content;
     padding-block: var(--spacing-sm);
-    border-block: 1px solid var(--off-white);
+    border-block-start: 1px solid var(--off-white);
   }
 
   .footer a {

@@ -50,7 +50,7 @@ h6 {
     gap: 1rem;
     grid-template-areas:
       "header header"
-      "hero aside"
+      "hero content"
       "footer footer";
   }
 
@@ -62,8 +62,8 @@ h6 {
     grid-area: hero;
   }
 
-  .aside-comp {
-    grid-area: aside;
+  .content-comp {
+    grid-area: card;
   }
 
   .footer-comp {
