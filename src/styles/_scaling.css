@@ -2,7 +2,7 @@
   /* Base Icon Sizing */
   --icon-xs: 1.25em;
   --icon-sm: 1.5em;
-  --icon-md: 1.75em;
+  --icon-md: 2em;
   --icon-lg: 2em;
 
   /* Base Gap Scale */
@@ -26,8 +26,8 @@
     /* Resp. Icon Sizing */
     --icon-xs: 1.25em;
     --icon-sm: 1.75em;
-    --icon-md: 2.25em;
-    --icon-lg: 3.5em;
+    --icon-md: 2em;
+    --icon-lg: 2.25em;
 
     /* Resp. Gap Scale */
     --gap-xs: calc(1em * 0.75);
@@ -51,8 +51,8 @@
     /* Resp. Icon Sizing */
     --icon-xs: 1.5em;
     --icon-sm: 2em;
-    --icon-md: 2.5em;
-    --icon-lg: 4em;
+    --icon-md: 2.25em;
+    --icon-lg: 3em;
 
     /* Resp. Gap Scale */
     --gap-xs: calc(1em * 1);
@@ -76,8 +76,8 @@
     /* Resp. Icon Sizing */
     --icon-xs: 1.75em;
     --icon-sm: 2.25em;
-    --icon-md: 2.75em;
-    --icon-lg: 4.5em;
+    --icon-md: 2.50em;
+    --icon-lg: 3em;
 
     /* Resp. Gap Scale */
     --gap-xs: calc(1em * 1.25);
