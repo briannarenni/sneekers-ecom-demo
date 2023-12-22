@@ -9,8 +9,8 @@
       <h1 class="headline">Fall Limited Edition Sneakers</h1>
     </header>
     <p class="desc">
-      These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber
-      outer sole, they’ll withstand everything the weather can offer.
+      These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer
+      sole, they’ll withstand everything the weather can offer.
     </p>
     <section class="prices">
       <div class="prices-left">
@@ -39,7 +39,7 @@
     flex-direction: column;
     align-items: center;
     gap: var(--gap-md);
-    padding-inline: var(--gap-lg);
+    padding-inline: var(--gap-md);
   }
 
   .title-wrap {
@@ -109,6 +109,7 @@
     .prices {
       display: block;
     }
+
     .old-price {
       margin-block-start: var(--spacing-sm);
     }
@@ -116,13 +117,18 @@
 
   @media screen and (min-width: 550px) {
     .product-info {
-      width: clamp(400px, 80%, 600px);
+      width: clamp(450px, 80%, 650px);
     }
   }
 
   @media screen and (min-width: 1024px) {
     .product-card {
       margin-block: 0;
+      align-items: center;
+    }
+
+    .product-info {
+      padding-inline: 0;
     }
 
     .cta-wrap {

@@ -32,7 +32,6 @@
   #full-menu {
     width: 100%;
     margin-block-start: 0;
-    /* padding-inline: var(--spacing-md); */
   }
 
   .full-menu a {

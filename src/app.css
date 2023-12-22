@@ -47,7 +47,7 @@ h6 {
   .app-container {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto min-content;
-    gap: 1rem;
+    gap: 1em;
     grid-template-areas:
       "header header"
       "hero content"
