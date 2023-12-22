@@ -7,7 +7,6 @@
 
 <style>
   .footer {
-    color: var(--gray-blue);
     font-size: 14px;
     text-align: center;
     height: fit-content;

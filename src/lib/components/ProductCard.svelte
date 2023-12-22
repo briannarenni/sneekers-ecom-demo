@@ -1,7 +1,5 @@
 <script>
   import { AddCartBtn, QtyBtn } from '@btn/index.js';
-
-  const iconColor = getComputedStyle(document.documentElement).getPropertyValue('--primary').trim();
 </script>
 
 <div class="product-card">

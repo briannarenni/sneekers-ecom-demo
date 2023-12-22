@@ -1,8 +1,8 @@
 <script>
   import { Menu, ShoppingCart, CircleUserRound } from 'lucide-svelte';
 
-  import FullMenu from '@components/FullMenu.svelte';
-  import MobileMenu from '@components/MobileMenu.svelte';
+  import FullMenu from '@components/menu/FullMenu.svelte';
+  import MobileMenu from '@components/menu/MobileMenu.svelte';
 </script>
 
 <header class="header-comp">
@@ -57,12 +57,12 @@
       border-block-end: 1px solid var(--off-white);
     }
 
-    .left-nav {
-      width: max-content;
-    }
-
     .logo {
       display: block;
+    }
+
+    .left-nav {
+      width: max-content;
     }
   }
 </style>
