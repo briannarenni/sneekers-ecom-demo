@@ -9,6 +9,10 @@
   <Footer />
 </main>
 
-<!-- * Add padding on desktop LATER -->
 <style>
+  @media screen and (min-width: 1400px) {
+    .app-container {
+      padding-inline: var(--gap-xxl);
+    }
+  }
 </style>

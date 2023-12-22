@@ -3,13 +3,8 @@
 
   let currentSlide = 0;
 
-  const prevSlide = () => {
-    currentSlide = (currentSlide - 1 + productPhotos.length) % productPhotos.length;
-  };
-
-  const nextSlide = () => {
-    currentSlide = (currentSlide + 1) % productPhotos.length;
-  };
+  const prevSlide = () => (currentSlide = (currentSlide - 1 + productPhotos.length) % productPhotos.length);
+  const nextSlide = () => (currentSlide = (currentSlide + 1) % productPhotos.length);
 </script>
 
 <section class="carousel">
@@ -19,11 +14,9 @@
         class="carousel-item {i === currentSlide ? 'active' : ''}"
         style="transform: translateX(-{currentSlide * 100}%)"
       >
-        <div class="img-wrap">
+        <div class="carousel-img-wrap">
           <img class="carousel-img" src={photo} alt="Slide {i + 1}" />
-          <span class="img-chip chip primary round horizontal"
-            >{i + 1} of {productPhotos.length}</span
-          >
+          <span class="img-chip chip primary round horizontal">{i + 1} of {productPhotos.length}</span>
         </div>
       </section>
     {/each}
@@ -54,7 +47,7 @@
     transition: transform 0.3s ease;
   }
 
-  .img-wrap {
+  .carousel-img-wrap {
     position: relative;
   }
 
@@ -64,10 +57,6 @@
     right: 5px;
     z-index: 1;
     border: none;
-  }
-
-  .carousel-img {
-    object-fit: contain;
   }
 
   .control-btn {
@@ -99,16 +88,23 @@
   }
 
   /* Queries */
+  @media screen and (max-width: 549px) {
+    .carousel-img-wrap {
+      max-height: 440px;
+      overflow: hidden;
+    }
+  }
+
   @media screen and (min-width: 550px) {
-    .img-wrap {
+    .carousel-img-wrap {
       width: clamp(400px, 80%, 600px);
       border-radius: 15px;
     }
   }
 
   @media screen and (min-width: 1024px) {
-    .img-wrap {
-      max-width: 72%;
+    .carousel {
+      display: none;
     }
   }
 </style>

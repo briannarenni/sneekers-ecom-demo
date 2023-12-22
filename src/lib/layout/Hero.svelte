@@ -1,7 +1,7 @@
 <script>
   import SlideGallery from '@components/hero/SlideGallery.svelte';
+  import Gallery from '@components/hero/Gallery.svelte';
 </script>
 
 <SlideGallery />
-
-<!-- No hero padding on mobile -->
+<Gallery />

@@ -46,8 +46,7 @@ h6 {
 @media screen and (min-width: 1024px) {
   .app-container {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto min-content;
-    gap: 1em;
+    grid-template-rows: auto 80vh max-content;
     grid-template-areas:
       "header header"
       "hero content"

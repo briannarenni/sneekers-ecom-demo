@@ -128,6 +128,7 @@
     }
 
     .product-info {
+      width: 80%;
       padding-inline: 0;
     }
 

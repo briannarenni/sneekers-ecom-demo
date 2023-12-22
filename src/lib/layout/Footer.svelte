@@ -10,7 +10,7 @@
     font-size: 14px;
     text-align: center;
     height: fit-content;
-    padding-block: var(--spacing-sm);
+    padding-block: var(--spacing-md);
     border-block-start: 1px solid var(--off-white);
   }
 
