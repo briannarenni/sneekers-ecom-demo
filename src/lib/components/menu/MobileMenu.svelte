@@ -97,10 +97,4 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
   }
-
-  @media screen and (min-width: 1024px) {
-    .menu-btn-wrap {
-      display: none;
-    }
-  }
 </style>

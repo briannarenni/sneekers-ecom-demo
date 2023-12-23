@@ -1,16 +1,37 @@
 <script>
+  import { onMount, onDestroy } from 'svelte';
+  import { addResizeListener, removeResizeListener, updateMobileStatus } from '@scripts/screenHelpers.js';
   import { Menu, ShoppingCart, CircleUserRound } from 'lucide-svelte';
-
   import FullMenu from '@components/menu/FullMenu.svelte';
   import MobileMenu from '@components/menu/MobileMenu.svelte';
+
+  let isMobile = updateMobileStatus();
+
+  const handleScreenResize = () => {
+    isMobile = updateMobileStatus();
+  };
+
+  onMount(() => {
+    addResizeListener();
+    window.addEventListener('resize', handleScreenResize);
+  });
+
+  onDestroy(() => {
+    removeResizeListener();
+    window.removeEventListener('resize', handleScreenResize);
+  });
 </script>
 
 <header class="header-comp">
   <nav class="nav-bar">
     <div class="left-nav">
-      <MobileMenu />
-      <img class="logo" src="src/assets/icons/logo.svg" alt="sneekers Logo" />
-      <FullMenu />
+      {#if isMobile}
+        <MobileMenu />
+        <img class="logo" src="src/assets/icons/logo.svg" alt="sneekers Logo" />
+      {:else}
+        <img class="logo" src="src/assets/icons/logo.svg" alt="sneekers Logo" />
+        <FullMenu />
+      {/if}
     </div>
 
     <div class="right-nav">

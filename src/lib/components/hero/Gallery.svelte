@@ -93,10 +93,4 @@
       width: 110px;
     }
   }
-
-  @media screen and (max-width: 1023px) {
-    .hero-grid {
-      display: none;
-    }
-  }
 </style>

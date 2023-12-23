@@ -42,10 +42,4 @@
   .full-menu a:hover {
     background-color: var(--secondary-container);
   }
-
-  @media screen and (max-width: 1023px) {
-    .full-menu {
-      display: none;
-    }
-  }
 </style>
