@@ -29,7 +29,6 @@
       out:fly={{ duration: 300 }}
     ></div>
 
-    <!-- Nav drawer -->
     <nav
       class="menu min left drawer"
       in:fly={{ x: -100, duration: 200 }}
