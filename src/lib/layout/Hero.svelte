@@ -1,7 +1,7 @@
 <script>
-  import SlideGallery from '@components/hero/SlideGallery.svelte';
+  import Carousel from '@components/hero/Carousel.svelte';
   import Gallery from '@components/hero/Gallery.svelte';
 </script>
 
-<SlideGallery />
+<Carousel />
 <Gallery />

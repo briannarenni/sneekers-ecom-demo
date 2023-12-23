@@ -1,37 +1,42 @@
 <script>
   import { onMount } from 'svelte';
-  import { productPhotos, productThumbs } from '@scripts/images.js';
-  import Lightbox from '@components/hero/Lightbox.svelte';
 
-  let spotlightIndex = 0;
-  let lightboxComp;
+  import { productPhotos, productThumbs } from '@scripts/images.js';
+
+  export let spotlightIndex;
+  $: currentImg = spotlightIndex;
 
   const handleKeyDown = (event) => (event.key === 'Enter' ? updateSpotlight() : null);
 
   const updateSpotlight = (index) => (spotlightIndex = index);
 
-  const openModal = (index) => {
-    spotlightIndex = index;
-    lightboxComp.openModal();
+  const prevImg = () => {
+    currentImg = (currentImg - 1 + productPhotos.length) % productPhotos.length;
+    updateSpotlight(currentImg);
   };
 
-  onMount(() => updateSpotlight(0));
+  const nextImg = () => {
+    currentImg = (currentImg + 1) % productPhotos.length;
+    updateSpotlight(currentImg);
+  };
 </script>
 
 <section class="hero-grid">
-  <div
-    class="spotlight"
-    role="button"
-    on:click={openModal(spotlightIndex)}
-    on:keydown={handleKeyDown}
-    tabindex="0"
-  >
+  <div class="spotlight">
     <img class="spotlight-img" src={productPhotos[spotlightIndex]} alt="Spotlight slide" />
   </div>
+
+  <button class="control-btn prev" on:click={prevImg}>
+    <img src="src/assets/icons/icon-previous.svg" alt="Previous" />
+  </button>
+  <button class="control-btn next" on:click={nextImg}>
+    <img src="src/assets/icons/icon-next.svg" alt="Next" />
+  </button>
+
   <div class="gallery">
     {#each productThumbs as thumb, i (i)}
       <div
-        class="gallery-img-wrap {i === spotlightIndex ? 'active' : ''}"
+        class="gallery-img-wrap {i === spotlightIndex ? 'active medium-elevate' : ''}"
         role="button"
         on:click={() => updateSpotlight(i)}
         on:keydown={handleKeyDown}
@@ -42,8 +47,6 @@
     {/each}
   </div>
 </section>
-
-<Lightbox bind:this={lightboxComp} {spotlightIndex} />
 
 <style>
   .hero-grid {
@@ -57,10 +60,12 @@
   .spotlight {
     width: fit-content;
     cursor: pointer;
+    position: relative;
   }
 
   .spotlight img {
     width: 450px;
+    border-radius: 15px;
   }
 
   .gallery {
@@ -73,15 +78,40 @@
   .gallery-img-wrap {
     cursor: pointer;
     width: 95px;
+    border-radius: 15px;
   }
 
   .active {
-    outline: 3px solid var(--primary);
+    /* outline: 2px solid var(--primary); */
+    outline: 2px solid #ffffff;
     border-radius: 15px;
   }
 
-  img {
-    border-radius: 15px;
+  /* Buttons */
+  .control-btn {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+  }
+
+  .prev {
+    position: absolute;
+    top: 35%;
+    left: -20px;
+  }
+
+  .next {
+    position: absolute;
+    top: 35%;
+    right: -20px;
+  }
+
+  /* Override BeerCSS style */
+  .control-btn img {
+    min-inline-size: initial;
+    max-inline-size: initial;
+    min-block-size: initial;
+    max-block-size: initial;
   }
 
   @media screen and (min-width: 1400px) {
