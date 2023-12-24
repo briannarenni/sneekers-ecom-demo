@@ -26,14 +26,13 @@
       on:keydown={handleKeyDown}
       tabindex="-1"
       in:fly={{ duration: 200 }}
-      out:fly={{ duration: 300 }}
-    ></div>
+      out:fly={{ duration: 300 }}>
+    </div>
 
     <nav
       class="menu min left drawer"
       in:fly={{ x: -100, duration: 200 }}
-      out:fly={{ x: -100, duration: 300 }}
-    >
+      out:fly={{ x: -100, duration: 300 }}>
       <button class="close-btn" on:click={toggleMenu}>
         <X class="mobile-icon" />
       </button>

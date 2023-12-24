@@ -12,8 +12,7 @@
     {#each productPhotos as photo, i (i)}
       <section
         class="carousel-item {i === currentSlide ? 'active' : ''}"
-        style="transform: translateX(-{currentSlide * 100}%)"
-      >
+        style="transform: translateX(-{currentSlide * 100}%)">
         <div class="carousel-img-wrap">
           <img class="carousel-img" src={photo} alt="Slide {i + 1}" />
           <span class="img-chip chip primary round horizontal">{i + 1} of {productPhotos.length}</span>

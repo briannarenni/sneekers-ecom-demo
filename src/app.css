@@ -1,8 +1,8 @@
 @import '/node_modules/beercss/dist/cdn/beer.min.css';
 
-@import '/src/styles/_reset.css';
-@import '/src/styles/_design.css';
-@import '/src/styles/_scaling.css';
+@import '@styles/_reset.css';
+@import '@styles/_design.css';
+@import '@styles/_scaling.css';
 
 :root {
   color-scheme: light dark;

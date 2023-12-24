@@ -5,4 +5,3 @@
 <ProductCard />
 
 <style></style>
-

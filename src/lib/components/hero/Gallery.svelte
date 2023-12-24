@@ -24,8 +24,7 @@
     role="button"
     on:click={openModal(spotlightIndex)}
     on:keydown={handleKeyDown}
-    tabindex="0"
-  >
+    tabindex="0">
     <img class="spotlight-img" src={productPhotos[spotlightIndex]} alt="Spotlight slide" />
   </div>
   <div class="gallery">
@@ -35,8 +34,7 @@
         role="button"
         on:click={() => updateSpotlight(i)}
         on:keydown={handleKeyDown}
-        tabindex="0"
-      >
+        tabindex="0">
         <img class="gallery-img" src={thumb} alt="Product img {i + 1}" />
       </div>
     {/each}
