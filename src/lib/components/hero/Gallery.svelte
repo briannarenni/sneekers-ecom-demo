@@ -1,17 +1,18 @@
 <script>
   import { onMount } from 'svelte';
-  import { productPhotos, productThumbs } from '@scripts/images.js';
   import Lightbox from '@components/hero/Lightbox.svelte';
+  import {
+    productPhotos,
+    productThumbs,
+    spotlightIndex,
+    updateSpotlight,
+    keyDownHandler
+  } from '@stores/imageStore.js';
 
-  let spotlightIndex = 0;
   let lightboxComp;
 
-  const handleKeyDown = (event) => (event.key === 'Enter' ? updateSpotlight() : null);
-
-  const updateSpotlight = (index) => (spotlightIndex = index);
-
   const openModal = (index) => {
-    spotlightIndex = index;
+    spotlightIndex.set(index);
     lightboxComp.openModal();
   };
 
@@ -22,18 +23,19 @@
   <div
     class="spotlight"
     role="button"
-    on:click={openModal(spotlightIndex)}
-    on:keydown={handleKeyDown}
+    on:click={openModal($spotlightIndex)}
+    on:keydown={keyDownHandler}
     tabindex="0">
-    <img class="spotlight-img" src={productPhotos[spotlightIndex]} alt="Spotlight slide" />
+    <img class="spotlight-img" src={productPhotos[$spotlightIndex]} alt="Spotlight slide" />
   </div>
+
   <div class="gallery">
     {#each productThumbs as thumb, i (i)}
       <div
-        class="gallery-img-wrap {i === spotlightIndex ? 'active' : ''}"
+        class="gallery-img-wrap {i === $spotlightIndex ? 'active' : ''}"
         role="button"
         on:click={() => updateSpotlight(i)}
-        on:keydown={handleKeyDown}
+        on:keydown={keyDownHandler}
         tabindex="0">
         <img class="gallery-img" src={thumb} alt="Product img {i + 1}" />
       </div>
@@ -41,7 +43,7 @@
   </div>
 </section>
 
-<Lightbox bind:this={lightboxComp} {spotlightIndex} />
+<Lightbox bind:this={lightboxComp} />
 
 <style>
   .hero-grid {

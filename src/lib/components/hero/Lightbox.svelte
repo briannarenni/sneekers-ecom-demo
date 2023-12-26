@@ -3,7 +3,6 @@
   import ModalGallery from '@components/hero/ModalGallery.svelte';
 
   let dialogModal;
-  export let spotlightIndex;
 
   // Allows Gallery to access dialog method
   export function openModal() {
@@ -20,13 +19,13 @@
     <button class="close-btn" on:click={closeModal}>
       <X class="mobile-icon" />
     </button>
-    <ModalGallery {spotlightIndex} />
+    <ModalGallery />
   </div>
 </dialog>
 
 <style>
   .lightbox {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
   }
 
   .modal-content {
@@ -40,6 +39,7 @@
   .close-btn {
     align-self: flex-end;
     color: #fff;
+    transform: scale(1.3);
   }
 
   .close-btn:active {

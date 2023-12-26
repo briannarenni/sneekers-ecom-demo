@@ -1,30 +1,30 @@
 <script>
-  import { productPhotos } from '@scripts/images.js';
+  import { productPhotos } from '@stores/imageStore.js';
 
-  let currentSlide = 0;
+  let currentImg = 0;
 
-  const prevSlide = () => (currentSlide = (currentSlide - 1 + productPhotos.length) % productPhotos.length);
-  const nextSlide = () => (currentSlide = (currentSlide + 1) % productPhotos.length);
+  const prevImg = () => (currentImg = (currentImg - 1 + productPhotos.length) % productPhotos.length);
+  const nextImg = () => (currentImg = (currentImg + 1) % productPhotos.length);
 </script>
 
 <section class="carousel">
   <section class="carousel-inner">
     {#each productPhotos as photo, i (i)}
       <section
-        class="carousel-item {i === currentSlide ? 'active' : ''}"
-        style="transform: translateX(-{currentSlide * 100}%)">
+        class="carousel-item {i === currentImg ? 'active' : ''}"
+        style="transform: translateX(-{currentImg * 100}%)">
         <div class="carousel-img-wrap">
-          <img class="carousel-img" src={photo} alt="Slide {i + 1}" />
+          <img class="carousel-img" src={photo} alt="Img {i + 1}" />
           <span class="img-chip chip primary round horizontal">{i + 1} of {productPhotos.length}</span>
         </div>
       </section>
     {/each}
   </section>
 
-  <button class="control-btn prev" on:click={prevSlide}>
+  <button class="control-btn prev" on:click={prevImg}>
     <img src="src/assets/icons/icon-previous.svg" alt="Previous" />
   </button>
-  <button class="control-btn next" on:click={nextSlide}>
+  <button class="control-btn next" on:click={nextImg}>
     <img src="src/assets/icons/icon-next.svg" alt="Next" />
   </button>
 </section>
