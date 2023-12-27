@@ -1,5 +1,6 @@
 <script>
   import { windowSizeStore } from 'svelte-legos';
+
   import Carousel from '@components/hero/Carousel.svelte';
   import Gallery from '@components/hero/Gallery.svelte';
 

@@ -1,6 +1,7 @@
 <script>
   import { windowSizeStore } from 'svelte-legos';
   import { Menu, ShoppingCart, CircleUserRound } from 'lucide-svelte';
+  import CartDrawer from '@components/CartDrawer.svelte';
   import FullMenu from '@components/menu/FullMenu.svelte';
   import MobileMenu from '@components/menu/MobileMenu.svelte';
 
@@ -22,7 +23,7 @@
     </div>
 
     <div class="right-nav">
-      <ShoppingCart class="nav-icon" strokeWidth={1.5} fill-opacity="0" />
+      <CartDrawer />
       <CircleUserRound class="nav-icon" strokeWidth={1.5} fill-opacity="0" />
     </div>
   </nav>
