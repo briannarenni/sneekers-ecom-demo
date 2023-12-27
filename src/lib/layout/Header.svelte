@@ -1,25 +1,12 @@
 <script>
-  import { onMount, onDestroy } from 'svelte';
-  import { addResizeListener, removeResizeListener, updateMobileStatus } from '@scripts/screenHelpers.js';
+  import { windowSizeStore } from 'svelte-legos';
   import { Menu, ShoppingCart, CircleUserRound } from 'lucide-svelte';
   import FullMenu from '@components/menu/FullMenu.svelte';
   import MobileMenu from '@components/menu/MobileMenu.svelte';
 
-  let isMobile = updateMobileStatus();
-
-  const handleScreenResize = () => {
-    isMobile = updateMobileStatus();
-  };
-
-  onMount(() => {
-    addResizeListener();
-    window.addEventListener('resize', handleScreenResize);
-  });
-
-  onDestroy(() => {
-    removeResizeListener();
-    window.removeEventListener('resize', handleScreenResize);
-  });
+  const size = windowSizeStore();
+  const mobileBreakpoint = 1023;
+  $: isMobile = $size.width < mobileBreakpoint;
 </script>
 
 <header class="header-comp">
