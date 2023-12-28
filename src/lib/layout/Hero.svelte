@@ -1,8 +1,6 @@
 <script>
   import { windowSizeStore } from 'svelte-legos';
-
-  import Carousel from '@components/hero/Carousel.svelte';
-  import Gallery from '@components/hero/Gallery.svelte';
+  import { Carousel, Gallery } from '@components/hero/index.js';
 
   const size = windowSizeStore();
   const mobileBreakpoint = 1023;

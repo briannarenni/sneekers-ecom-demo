@@ -1,6 +1,6 @@
 <script>
   import { X } from 'lucide-svelte';
-  import ModalGallery from '@components/hero/ModalGallery.svelte';
+  import { ModalGallery } from '@components/hero/index.js';
 
   let dialogModal;
 

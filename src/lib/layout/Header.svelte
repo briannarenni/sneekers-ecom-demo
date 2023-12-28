@@ -1,9 +1,7 @@
 <script>
   import { windowSizeStore } from 'svelte-legos';
   import { Menu, ShoppingCart, CircleUserRound } from 'lucide-svelte';
-  import CartModal from '@components/CartModal.svelte';
-  import FullMenu from '@components/menu/FullMenu.svelte';
-  import MobileMenu from '@components/menu/MobileMenu.svelte';
+  import { CartModal, FullMenu, MobileMenu } from '@components/index.js';
 
   const size = windowSizeStore();
   const mobileBreakpoint = 1023;
@@ -56,14 +54,22 @@
   @media screen and (min-width: 768px) {
     header {
       padding-block: var(--spacing-sm);
-      padding-inline: var(--gap-xxl);
+      padding-inline: var(--gap-lg);
+      border-block-end: 1px solid var(--off-white);
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    header {
+      margin-block-end: var(--spacing-sm);
     }
   }
 
   @media screen and (min-width: 1024px) {
     header {
-      padding-inline: var(--gap-xxl);
-      border-block-end: 1px solid var(--off-white);
+      width: 95%;
+      margin: 0 auto;
+      padding-inline: var(--gap-xl);
     }
 
     .logo {

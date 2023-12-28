@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import Lightbox from '@components/hero/Lightbox.svelte';
+  import { Lightbox } from '@components/hero/index.js';
   import {
     productPhotos,
     productThumbs,
