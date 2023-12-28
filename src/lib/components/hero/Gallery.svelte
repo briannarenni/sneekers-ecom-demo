@@ -11,9 +11,9 @@
 
   let lightboxComp;
 
-  const openModal = (index) => {
+  const openLightbox = (index) => {
     spotlightIndex.set(index);
-    lightboxComp.openModal();
+    lightboxComp.openLightbox();
   };
 
   onMount(() => updateSpotlight(0));
@@ -23,7 +23,7 @@
   <div
     class="spotlight"
     role="button"
-    on:click={openModal($spotlightIndex)}
+    on:click={openLightbox($spotlightIndex)}
     on:keydown={keyDownHandler}
     tabindex="0">
     <img class="spotlight-img" src={productPhotos[$spotlightIndex]} alt="Spotlight slide" />

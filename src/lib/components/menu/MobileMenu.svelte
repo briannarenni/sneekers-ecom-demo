@@ -13,7 +13,7 @@
   <div class="menu-btn" role="button" on:click={toggleMenu} on:keydown={handleKeyDown} tabindex="0">
     <Menu class="nav-icon" />
   </div>
-  <img class="logo" src="src/assets/icons/logo.svg" alt="sneekers Logo" />
+  <img class="logo" src="public/assets/icons/logo.svg" alt="sneekers Logo" />
 </section>
 
 {#if isMenuOpen}
@@ -78,10 +78,6 @@
   .close-btn {
     color: var(--primary-text);
     width: fit-content;
-  }
-
-  .close-btn:focus {
-    outline: 1px solid var(--secondary);
   }
 
   .menu-link {

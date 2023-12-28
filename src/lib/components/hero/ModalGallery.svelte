@@ -1,5 +1,5 @@
 <script>
-  import { Controls } from '@btn/index.js';
+  import { ControlBtns } from '@btn/index.js';
   import {
     productPhotos,
     productThumbs,

@@ -1,7 +1,7 @@
 <script>
   import { windowSizeStore } from 'svelte-legos';
   import { Menu, ShoppingCart, CircleUserRound } from 'lucide-svelte';
-  import CartDrawer from '@components/CartDrawer.svelte';
+  import CartModal from '@components/CartModal.svelte';
   import FullMenu from '@components/menu/FullMenu.svelte';
   import MobileMenu from '@components/menu/MobileMenu.svelte';
 
@@ -15,15 +15,15 @@
     <div class="left-nav">
       {#if isMobile}
         <MobileMenu />
-        <img class="logo" src="src/assets/icons/logo.svg" alt="sneekers Logo" />
+        <img class="logo" src="public/assets/icons/logo.svg" alt="sneekers Logo" />
       {:else}
-        <img class="logo" src="src/assets/icons/logo.svg" alt="sneekers Logo" />
+        <img class="logo" src="public/assets/icons/logo.svg" alt="sneekers Logo" />
         <FullMenu />
       {/if}
     </div>
 
     <div class="right-nav">
-      <CartDrawer />
+      <CartModal />
       <CircleUserRound class="nav-icon" strokeWidth={1.5} fill-opacity="0" />
     </div>
   </nav>

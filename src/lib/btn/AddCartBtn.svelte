@@ -18,7 +18,7 @@
     padding-block: 0.35em;
     background-color: var(--primary);
     border-radius: 10px;
-    box-shadow: 0px 14px 17px -15px var(--primary);
+    box-shadow: 0px 12px 17px -15px var(--primary);
   }
 
   .cart-btn span {

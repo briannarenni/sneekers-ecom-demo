@@ -5,18 +5,14 @@
   let dialogModal;
 
   // Allows Gallery to access dialog method
-  export function openModal() {
-    dialogModal.showModal();
-  }
+  export const openLightbox = () => dialogModal.showModal();
 
-  function closeModal() {
-    dialogModal.close();
-  }
+  const closeLightbox = () => dialogModal.close();
 </script>
 
 <dialog class="lightbox max" bind:this={dialogModal}>
   <div class="modal-content">
-    <button class="close-btn" on:click={closeModal}>
+    <button class="close-btn" on:click={closeLightbox}>
       <X class="mobile-icon" />
     </button>
     <ModalGallery />
