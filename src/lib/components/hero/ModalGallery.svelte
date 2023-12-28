@@ -19,7 +19,7 @@
     <img class="spotlight-img" src={productPhotos[$currentImg]} alt="Spotlight slide" />
   </div>
 
-  <Controls />
+  <ControlBtns />
 
   <div class="gallery">
     {#each productThumbs as thumb, i (i)}

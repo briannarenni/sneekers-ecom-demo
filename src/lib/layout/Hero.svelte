@@ -1,12 +1,24 @@
 <script>
-  import { windowSizeStore } from 'svelte-legos';
-
+  import { onMount, onDestroy } from 'svelte';
+  import { addResizeListener, removeResizeListener, updateMobileStatus } from '@scripts/screenUtil.js';
   import Carousel from '@components/hero/Carousel.svelte';
   import Gallery from '@components/hero/Gallery.svelte';
 
-  const size = windowSizeStore();
-  const mobileBreakpoint = 1023;
-  $: isMobile = $size.width < mobileBreakpoint;
+  let isMobile = updateMobileStatus();
+
+  const handleScreenResize = () => {
+    isMobile = updateMobileStatus();
+  };
+
+  onMount(() => {
+    addResizeListener();
+    window.addEventListener('resize', handleScreenResize);
+  });
+
+  onDestroy(() => {
+    removeResizeListener();
+    window.removeEventListener('resize', handleScreenResize);
+  });
 </script>
 
 {#if isMobile}

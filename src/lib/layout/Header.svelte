@@ -1,13 +1,24 @@
 <script>
-  import { windowSizeStore } from 'svelte-legos';
+  import { onMount, onDestroy } from 'svelte';
   import { Menu, ShoppingCart, CircleUserRound } from 'lucide-svelte';
-  import CartModal from '@components/CartModal.svelte';
-  import FullMenu from '@components/menu/FullMenu.svelte';
-  import MobileMenu from '@components/menu/MobileMenu.svelte';
+  import { addResizeListener, removeResizeListener, updateMobileStatus } from '@scripts/screenUtil.js';
+  import { CartModal, FullMenu, MobileMenu } from '@components/index.js';
 
-  const size = windowSizeStore();
-  const mobileBreakpoint = 1023;
-  $: isMobile = $size.width < mobileBreakpoint;
+  let isMobile = updateMobileStatus();
+
+  const handleScreenResize = () => {
+    isMobile = updateMobileStatus();
+  };
+
+  onMount(() => {
+    addResizeListener();
+    window.addEventListener('resize', handleScreenResize);
+  });
+
+  onDestroy(() => {
+    removeResizeListener();
+    window.removeEventListener('resize', handleScreenResize);
+  });
 </script>
 
 <header class="header-comp">
