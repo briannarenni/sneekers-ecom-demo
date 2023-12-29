@@ -1,17 +1,17 @@
 import { get, writable } from 'svelte/store';
 
 export const productPhotos = [
-  'public/assets/products/product-1.jpg',
-  'public/assets/products/product-2.jpg',
-  'public/assets/products/product-3.jpg',
-  'public/assets/products/product-4.jpg'
+  'assets/products/product-1.jpg',
+  'assets/products/product-2.jpg',
+  'assets/products/product-3.jpg',
+  'assets/products/product-4.jpg'
 ]
 
 export const productThumbs = [
-  'public/assets/products/thumbnail-1.jpg',
-  'public/assets/products/thumbnail-2.jpg',
-  'public/assets/products/thumbnail-3.jpg',
-  'public/assets/products/thumbnail-4.jpg'
+  'assets/products/thumbnail-1.jpg',
+  'assets/products/thumbnail-2.jpg',
+  'assets/products/thumbnail-3.jpg',
+  'assets/products/thumbnail-4.jpg'
 ]
 
 export const spotlightIndex = writable(0);

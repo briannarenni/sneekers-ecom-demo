@@ -27,7 +27,7 @@
   <section class="modal-content">
     <div class="divider"></div>
     <section class="item-wrap">
-      <img class="product-img round large" src="public/assets/products/thumbnail-1.jpg" alt="item" />
+      <img class="product-img round large" src="assets/products/thumbnail-1.jpg" alt="item" />
       <div class="desc-wrap">
         <p class="item-name">Fall Limited Edition Sneakers</p>
         <div class="price-qty">

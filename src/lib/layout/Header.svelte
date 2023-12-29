@@ -13,9 +13,9 @@
     <div class="left-nav">
       {#if isMobile}
         <MobileMenu />
-        <img class="logo" src="public/assets/icons/logo.svg" alt="sneekers Logo" />
+        <img class="logo" src="assets/icons/logo.svg" alt="sneekers Logo" />
       {:else}
-        <img class="logo" src="public/assets/icons/logo.svg" alt="sneekers Logo" />
+        <img class="logo" src="assets/icons/logo.svg" alt="sneekers Logo" />
         <FullMenu />
       {/if}
     </div>

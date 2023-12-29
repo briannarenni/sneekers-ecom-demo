@@ -3,10 +3,10 @@
 </script>
 
 <button class="control-btn prev" on:click={prevImg}>
-  <img src="public/assets/icons/icon-previous.svg" alt="Previous" />
+  <img src="assets/icons/icon-previous.svg" alt="Previous" />
 </button>
 <button class="control-btn next" on:click={nextImg}>
-  <img src="public/assets/icons/icon-next.svg" alt="Next" />
+  <img src="assets/icons/icon-next.svg" alt="Next" />
 </button>
 
 <style>
