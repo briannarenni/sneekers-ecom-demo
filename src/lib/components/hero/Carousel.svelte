@@ -21,10 +21,10 @@
     {/each}
   </section>
 
-  <button class="control-btn prev" on:click={prevImg}>
+  <button type="button" class="control-btn prev" on:click={prevImg}>
     <img src="assets/icons/icon-previous.svg" alt="Previous" />
   </button>
-  <button class="control-btn next" on:click={nextImg}>
+  <button type="button" class="control-btn next" on:click={nextImg}>
     <img src="assets/icons/icon-next.svg" alt="Next" />
   </button>
 </section>

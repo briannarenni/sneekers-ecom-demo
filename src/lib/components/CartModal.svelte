@@ -3,12 +3,12 @@
   import { CheckoutBtn } from '@btn/index.js';
 
   let cartModal;
+  let isModalOpen = false;
 
-  const openCart = () => cartModal.showModal();
-  const closeCart = () => cartModal.close();
+  const toggleCart = () => (cartModal.open ? cartModal.close() : cartModal.showModal());
 </script>
 
-<button class="cart-btn" on:click={openCart}>
+<button type="button" class="cart-btn" on:click={toggleCart}>
   <span>
     <ShoppingCart class="nav-icon" strokeWidth={1.5} fill-opacity="0" overflow="visible" />
   </span>
@@ -16,10 +16,10 @@
 
 <dialog class="cart-modal" bind:this={cartModal}>
   <header class="modal-header">
-    <p class="title">Cart</p>
-    <button class="close-btn" on:click={closeCart} aria-label="Close cart">
+    <p class="title">Your Cart</p>
+    <button type="button" class="close-btn" on:click={toggleCart} aria-label="Close cart">
       <span>
-        <X size={28} />
+        <X size={30} strokeWidth={1.5} />
       </span>
     </button>
   </header>
@@ -27,7 +27,7 @@
   <section class="modal-content">
     <div class="divider"></div>
     <section class="item-wrap">
-      <img class="product-img round large" src="assets/products/thumbnail-1.jpg" alt="item" />
+      <img class="product-img round extra" src="assets/products/thumbnail-1.jpg" alt="item" />
       <div class="desc-wrap">
         <p class="item-name">Fall Limited Edition Sneakers</p>
         <div class="price-qty">
@@ -46,8 +46,8 @@
   .cart-modal {
     background-color: var(--page-bg);
     color: var(--primary-text);
-    width: 97%;
-    max-width: 400px;
+    width: 98%;
+    max-width: 450px;
     max-height: 330px;
     overflow-y: auto;
     padding-block-start: var(--gap-xs);
@@ -72,13 +72,18 @@
   }
 
   .title,
-  .item-name,
-  .item-qty {
+  .close-btn,
+  .item-name {
     color: var(--accent-text);
+    font-weight: 700;
+  }
+
+  .close-btn:hover {
+    outline: 1px solid var(--gray);
   }
 
   .title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
   }
 
@@ -94,8 +99,34 @@
     gap: var(--gap-xl);
   }
 
-  /* TODO: Desktop */
-  @media screen and (max-width: 550px) {
+  /* Positioning */
+  @media screen and (min-width: 550px) {
+    .cart-btn {
+      position: relative;
+    }
+
+    .cart-modal {
+      position: absolute;
+      top: 10%;
+      left: 60%;
+    }
+
+    .item-wrap {
+      width: 95%;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .cart-modal {
+      top: 8%;
+      left: 70%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .cart-modal {
+      max-width: 500px;
+    }
   }
 
   /* Webkit Scrollbar */

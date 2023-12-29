@@ -7,13 +7,13 @@
 </script>
 
 <div class="qty-select">
-  <button on:click={decreaseQty}>
+  <button type="button" on:click={decreaseQty}>
     <span class="qty-icon">
       <Minus size={18} strokeWidth={4} />
     </span>
   </button>
   <span class="qty">{productQty}</span>
-  <button on:click={increaseQty}>
+  <button type="button" on:click={increaseQty}>
     <span class="qty-icon">
       <Plus size={18} strokeWidth={4} />
     </span>

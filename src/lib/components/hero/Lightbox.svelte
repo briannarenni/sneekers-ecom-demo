@@ -12,7 +12,7 @@
 
 <dialog class="lightbox max" bind:this={dialogModal}>
   <div class="modal-content">
-    <button class="close-btn" on:click={closeLightbox}>
+    <button type="button" class="close-btn" on:click={closeLightbox}>
       <X class="mobile-icon" />
     </button>
     <ModalGallery />

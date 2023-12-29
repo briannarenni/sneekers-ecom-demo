@@ -10,9 +10,11 @@
 </script>
 
 <section class="menu-btn-wrap">
-  <div class="menu-btn" role="button" on:click={toggleMenu} on:keydown={handleKeyDown} tabindex="0">
-    <Menu class="nav-icon" />
-  </div>
+  <button type="button" class="menu-btn" on:click={toggleMenu}>
+    <span>
+      <Menu class="nav-icon" overflow="visible" />
+    </span>
+  </button>
   <img class="logo" src="assets/icons/logo.svg" alt="sneekers Logo" />
 </section>
 
@@ -33,8 +35,10 @@
       class="menu min left drawer"
       in:fly={{ x: -100, duration: 200 }}
       out:fly={{ x: -100, duration: 300 }}>
-      <button class="close-btn" on:click={toggleMenu}>
-        <X class="mobile-icon" />
+      <button type="button" class="close-btn" on:click={toggleMenu}>
+        <span>
+          <X size={30} />
+        </span>
       </button>
       <a href="/" class="menu-link" on:click={handleDummyClick}>
         <ArrowBigRight size={16} fill-opacity={0} />
@@ -78,6 +82,10 @@
   .close-btn {
     color: var(--primary-text);
     width: fit-content;
+  }
+
+  .close-btn:hover {
+    outline: 1px solid var(--blue-gray);
   }
 
   .menu-link {

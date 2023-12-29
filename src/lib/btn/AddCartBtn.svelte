@@ -4,7 +4,7 @@
   let cartBtn;
 </script>
 
-<button class="cart-btn" bind:this={cartBtn} on:click|preventDefault>
+<button type="button" class="cart-btn" bind:this={cartBtn} on:click|preventDefault>
   <span>
     <ShoppingCart size={22} fill-opacity="0" overflow="visible" />
     <p>Add to Cart</p>

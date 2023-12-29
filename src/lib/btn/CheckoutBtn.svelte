@@ -2,7 +2,7 @@
   let checkoutBtn;
 </script>
 
-<button class="checkout-btn" bind:this={checkoutBtn}> Checkout: $375.00 </button>
+<button type="button" class="checkout-btn" bind:this={checkoutBtn}> Checkout: $375.00 </button>
 
 <style>
   .checkout-btn {
